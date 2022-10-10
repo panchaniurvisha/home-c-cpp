@@ -5,13 +5,13 @@ class Bank{
     int accbalance;
     public:
     static int totaltracount,totaldpcount,totalwdcount,totaltraAmoucount,totaldpAmocount,totalwdAmocount;
-void getdata(){
+void GetData(){
     cout<<"\n person Name :";
     cin>>name;
-}
-void WdBalance(int amt){
     cout<<"\n enter account balance: ";
     cin>>accbalance;
+}
+void WdBalance(int amt){
     cout<<"\n enter withdraw balance :";
     cin>>amt;
     totalwdAmocount+=amt;
@@ -21,11 +21,11 @@ void DpBalance(int amt){
     cin>>amt;
     totaldpAmocount+=amt;
 }
-void setcount(int x,int y,int z){
-    totaltracount=x;
-    totaldpcount=y;
-    totalwdcount=z;
- }
+void SetVal(int x,int y,int z){
+   totaltracount=x;
+   totaldpcount=y;
+   totalwdcount=z; 
+}
 void Counter(){
     totaltracount++;
     totaldpcount++;
@@ -45,10 +45,10 @@ int main()
     int i;
     for(i=1;i<=3;i++)
     {
-        p[i].getdata();
+        p[i].GetData();
         p[i].WdBalance(5000);
         p[i].DpBalance(10000);
-        p[i].setcount(5,2,2);
+        p[i].SetVal(5,2,2);
         p[i].Counter();
     }
     cout<<"\n total Transaction Count :"<<Bank::totaltracount;
