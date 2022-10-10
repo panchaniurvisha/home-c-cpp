@@ -5,12 +5,6 @@ class Bank{
     int accbalance;
     public:
     static int totaltracount,totaldpcount,totalwdcount,totaltraAmoucount,totaldpAmocount,totalwdAmocount;
-Bank(){
-    accbalance=1000;
-}
-Bank(int initbalance){
-    accbalance=initbalance;
-}
 void getdata(){
     cout<<"\n person Name :";
     cin>>name;
