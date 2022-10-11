@@ -19,7 +19,7 @@ int main()
 {
     bank b;
     int ch,amt;
-    int choice;
+    //int choice;
     while(ch!=0)
     {
         cout<<"\n---------------MENU"<<endl;
