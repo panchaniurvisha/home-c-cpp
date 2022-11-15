@@ -1,50 +1,29 @@
-/*#include<iostream>
-using namespace std;
-template <class T1,class T2>
-class A
-{
-    public:
-     void display(T1 t1,T2 t2)
-        {
-            cout<<"Displaying Template :"<<t1<<"\t"<<t2<<"\n";
-        }
-};
-int main()
-{
-    A <int,float>a;
-    a.display(200,12.5);
-    A <string,char>b;
-    b.display("urvi",'u');
-    return 0;
-}*/
 #include<iostream>
 using namespace std;
-template <class T>
+template <class T1,class T2>
 class A
 {
+    T1 t1;
+    T2 t2;
     public:
-     virtual void display(T t)
+     A(T1 x,T2 y)
+       {
+           t1=x;
+           t2=y;
+       }
+     void display( )
         {
-            cout<<"Displaying Template :"<<t;
+          cout<<"\n displaying template :"<<t1<<"\t"<<t2;
         }
-};
-template <class T1,class T2>
-class B :public A
-{
-    public:
-      void display(T1 t1,T2 t2)
-      {
-             cout<<"Displaying Template 1 :"<<t1<<"\t"<<t2;
-      }
-
+    
 };
 int main()
 {
-   A <int> a,*p;
-   B <int,float> b;
-   p=&a;
-   p->display(12);
-   p=&b;
-   p->display("urvisha",'u');
+   A <int,float >a(20,20.50);
+   a.display();
+   A <int,int >b(200,200);
+   b.display();
+   A <string,char>c("urvisha",'u');
+   c.display();
    return 0;
 }
