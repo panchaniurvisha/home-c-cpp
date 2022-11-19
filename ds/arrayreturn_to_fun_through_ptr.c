@@ -1,5 +1,5 @@
-//return array through pointer
-/*#include<stdio.h>
+//return array through pointer using parameter
+#include<stdio.h>
 int *getArray(int p[])
 {
     printf("Array inside function: ");
@@ -17,8 +17,8 @@ int main()
         printf("%d\n", *(p+i));
         //printf("%u\n",(&p+i));
     return 0;
-}*/
-#include <stdio.h>  
+}
+/*#include <stdio.h>  
 int *getarray(int *a)  
 {  
     printf("Enter the elements in an array :\n ");  
@@ -34,4 +34,4 @@ int main()
   for(int i=0;i<5;i++)   
         printf("\n%d", *(p+i));  
     return 0;  
-} 
+} */
