@@ -77,7 +77,7 @@ int main()
 }
 void push()
 {
-    if(top>=n-1)
+    if(top>=n)
     {
         printf("\n\tSTACK is over flow");
         
@@ -86,28 +86,29 @@ void push()
     {
         printf(" Enter a value to be pushed:");
         scanf("%d",&x);
-        top++;
-        stack[top]=x;
+        stack[++top]=x;
+        //top++;
+        //stack[top]=x;
     }
 }
 void display()
 {
-    if(top>=0)
+    if(top>=n)
     {
-        printf("\n The elements in STACK \n");
-        for(i=top; i>=0; i--)
-            printf("\n%d",stack[i]);
-        printf("\n Press Next Choice");
+        printf("\n\t stack is overflow");
     }
     else
     {
-        printf("\n The STACK is empty");
+        printf("\n The elements in STACK \n");
+        for(i=top; i>=0; i--)
+        printf("\n%d",stack[i]);
+        printf("\n Press Next Choice");
     }
 }
 void lastInsert()
 {
     {
-    if(top>=n-1)
+    if(top>=n)
     {
         printf("\n\tSTACK is over flow");
         
@@ -116,8 +117,7 @@ void lastInsert()
     {
         printf(" Enter a value to be last insert:");
         scanf("%d",&x);
-        top++;
-        stack[top]=x;
+        stack[++top]=x;
         printf("\n Press Next Choice");
     }
 }
