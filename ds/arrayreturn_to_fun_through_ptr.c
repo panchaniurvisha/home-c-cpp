@@ -14,7 +14,8 @@ int main()
     p = getArray(a);
     printf("Array outside function: \n");
     for (int i = 0; i < 5; ++i)
-        printf("%d\n", *(p+i));
+        printf("%d\n", a[i]);
+        //printf("%d\n", *(p+i));
         //printf("%u\n",(&p+i));
     return 0;
 }
