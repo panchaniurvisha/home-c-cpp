@@ -29,8 +29,9 @@ void pop()
 #include<stdio.h>
 int stack[100],choice,n,top,x,i;
 void push(void);
+void pop(void);
 void display(void);
-void lastInsert(void);
+
 int main()
 {
     top=-1;
@@ -38,7 +39,7 @@ int main()
     scanf("%d",&n);
     printf("\n\t STACK OPERATIONS USING ARRAY");
     printf("\n\t--------------------------------");
-    printf("\n\t 1.PUSH\n\t 2.DISPLAY\n\t 3.LASTINSERT\n\t 4.EXIT");
+    printf("\n\t 1.PUSH\n\t 2.POP\n\t 3.DISPLAY\n\t 4.EXIT");
     do
     {
         printf("\n Enter the Choice:");
@@ -52,12 +53,12 @@ int main()
             }
             case 2:
             {
-                display();
+                pop();
                 break;
             }
             case 3:
             {
-                lastInsert();
+                display();
                 break;
             }
             case 4:
@@ -79,7 +80,7 @@ void push()
 {
     if(top>=n)
     {
-        printf("\n\tSTACK is over flow");
+        printf("\n\tSTACK is overflow");
         
     }
     else
@@ -91,11 +92,22 @@ void push()
         //stack[top]=x;
     }
 }
+void pop()
+{
+    if(top<0)
+    {
+        printf("\n stack is under flow");
+    }
+    else
+    {
+        printf("\n\t The popped elements is %d",stack[top--]);
+    }
+}
 void display()
 {
     if(top>=n)
     {
-        printf("\n\t stack is overflow");
+        printf("\n\t stack is over flow");
     }
     else
     {
@@ -104,21 +116,4 @@ void display()
         printf("\n%d",stack[i]);
         printf("\n Press Next Choice");
     }
-}
-void lastInsert()
-{
-    {
-    if(top>=n)
-    {
-        printf("\n\tSTACK is over flow");
-        
-    }
-    else
-    {
-        printf(" Enter a value to be last insert:");
-        scanf("%d",&x);
-        stack[++top]=x;
-        printf("\n Press Next Choice");
-    }
-}
 }
