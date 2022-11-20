@@ -1,3 +1,4 @@
+//STACK..................................................means thappi
 /*#include<stdio.h>
 #define pr printf //pre-processor directive
 #define SIZE 10 //globally declaration constant value
