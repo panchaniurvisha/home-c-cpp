@@ -1,7 +1,7 @@
 //QUEUE.......................................................
 #include<stdio.h>   
 #include<stdlib.h>  
-#define maxsize 5  
+#define maxsize 100 
 void insert();  
 void front_Delete();  
 void display();  
@@ -55,7 +55,7 @@ void insert()
     if(rear>=n-1)
     //if(rear==n-1)  
     {  
-        printf("\nOVERFLOW\n");  
+        printf("\nqueue is overflow\n");  
     }  
     else if(front == -1 && rear == -1)  
     {  
@@ -63,13 +63,12 @@ void insert()
          queue[rear]=x;
             printf("\n value inserted :");
             scanf("%d",&x); 
-           
     }  
     else   
     {  
        printf("\n value insert :");
        scanf("%d",&x);
-        queue[++rear]=x;
+       queue[++rear]=x;
     }  
 }  
 void front_Delete()  
@@ -81,17 +80,17 @@ void front_Delete()
     }  
     else if(front==rear)  
     {  
+        front=rear=-1;  
         x = queue[front];
-         front=rear=-1;  
          printf("\n value delete :%d",x);
     }
     else
     {  
-             x=queue[front++]; 
-            printf("\nvalue deleted :%d",x); 
+         x=queue[front++]; 
+         printf("\nvalue deleted :%d",x); 
            
     }  
-}    
+} 
 void display()  
 {  
     if(front == -1)  
@@ -105,4 +104,4 @@ void display()
             printf("\n%d\n",queue[i]);  
         }     
     }  
-}  
+} 
