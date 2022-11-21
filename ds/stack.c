@@ -15,7 +15,7 @@ void findSimpleInterest()
 int a[SIZE],top=-1;
 void push(int val)
 {
-    if(top>=10)
+    if(top>=10-1)
         stack overflow
     else
         a[++top]=val;
@@ -79,7 +79,7 @@ int main()
 }
 void push()
 {
-    if(top>=n)
+    if(top>=n-1)
     {
         printf("\n\tSTACK is overflow");
         
