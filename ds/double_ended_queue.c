@@ -18,7 +18,7 @@ void insert_front(int x){
     }    
     else {  
         printf("\n value inserted :%d",x);  
-        deque[front--]=x;   
+        deque[--front]=x;   
     }    
 }  
 void delete_rear(){    
