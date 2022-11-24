@@ -20,7 +20,7 @@ void insert_front(int x){
         printf("\n value inserted :%d",x);  
         deque[--front]=x;   
     }    
-}  
+}
 void delete_rear(){    
     if(front==rear==-1){    
         printf("Deque is empty");    
@@ -37,7 +37,7 @@ void delete_rear(){
      }    
      else{      
           printf("\nThe deleted element is %d",x);  
-          x=deque[rear--];  
+          x=deque[--rear];  
      }
 }   
     /*void display(){    
