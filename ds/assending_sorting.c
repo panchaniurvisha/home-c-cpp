@@ -18,13 +18,14 @@ int main()
                temp = a[i];    
                a[i] = a[j];    
                a[j] = temp;    
-           }     
-        }     
+           } 
+           else
+           {}    
+        }  
     }    
-    printf("\n");    
-    printf("Elements of array sorted in ascending order: \n");    
+    printf("\nElements of array sorted in ascending order: \n");    
     for (int i = 0; i <n; i++) { 
-        printf("%d ", a[i]);  
-    }    
+    printf("\n%d\n ", a[i]);
+    }  
     return 0;    
 }     
