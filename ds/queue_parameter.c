@@ -1,6 +1,6 @@
 //use parameter--------------------------------------------
 #include<stdio.h>
-#define SIZE 5
+#define size 5
 void insert(int);
 void front_Delete();
 void display();
@@ -20,7 +20,7 @@ int main(){
     return 0;
 }
 void insert(int x){
-    if(rear>=SIZE-1){  
+    if(rear>=size-1){  
      printf("\nqueue is overflow\n");
     }   
     else if(front == -1 && rear == -1){  
