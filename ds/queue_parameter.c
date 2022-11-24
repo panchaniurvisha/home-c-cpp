@@ -24,9 +24,9 @@ void insert(int x){
      printf("\nqueue is overflow\n");
     }   
     else if(front == -1 && rear == -1){  
-        front = rear=0;  
+        front = rear=0; 
+        queue[rear]=x; 
         printf("\n value inserted :%d",x);
-        queue[rear]=x;
     }  
     else{  
        printf("\n value insert :%d",x);
