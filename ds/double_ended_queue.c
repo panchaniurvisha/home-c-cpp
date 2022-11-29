@@ -1,4 +1,4 @@
-//DOUBLE ENDED QUEUE___________________________________________
+//DOUBLE ENDED QUEUE_sir program__________________________________________
 /*#include<stdio.h>
 #define SIZE 3
 int front=-1,rear=-1,deque_arr[SIZE];
@@ -163,7 +163,7 @@ int main()
     }
     while(ch != 0);
 }*/
-//changes progrm============================
+//my progrm============================
 #include<stdio.h>
 #define SIZE 3
 int front=-1,rear=-1,queqe[SIZE],val;
@@ -177,6 +177,7 @@ void RearInsert()
     else if(rear==-1 && front==-1)
     {
         front=rear=0;
+        queqe[rear]=val;
         printf("\n front : %d \t rear : %d ",front,rear);
         printf("Enter Value:");
         scanf("%d",&val);
@@ -187,13 +188,14 @@ void RearInsert()
         printf("\n front : %d \t rear : %d ",front,rear);
         printf("Enter Value:");
         scanf("%d",&val);
+       
     }
         queqe[rear]=val;
 } 
 void frontInsert(){
     printf("\n before -->  front : %d \t rear : %d ",front,rear);    
     int added_item;
-    if((front==0 && rear == SIZE - 1)||(front == rear+1))
+    if(front == rear+1)
     {    
         printf("Overflow"); 
         return ;   
@@ -260,49 +262,18 @@ void FrontDelete(){
         front =front + 1;
     }
 }
-void print(){
-    int front_pos=front,rear_pos=rear;
-    if(front==-1)
+void print()
+{
+    int i=front;
+    printf("\n elements in a deque are==");
+    while(i!=rear)
     {
-        printf("Queqe Is empty:"); 
-        return;
+        printf("\t%d",queqe[i]);
+        i=(i+1)%SIZE;
     }
-    printf("\n Queue elements :");
-    if(front_pos <= rear_pos)
-    {
-        while(front_pos <= rear_pos)
-        {
-          printf("\t%d",queqe[front_pos]);
-          front_pos++;
-        }
-    }
-    else
-    {
-        while(front_pos <=SIZE -1)
-        {
-          printf("\t%d",queqe[front_pos]);
-          front_pos++;
-        }
-        front_pos =0;
-        while(front_pos <= rear_pos)
-        {
-          printf("\t%d",queqe[front_pos]);
-          front_pos++;
-        }
-    }
-    printf("\n");
+    printf("\t%d", queqe[rear]);
+
 } 
-    /*{}==============error====in print=======}printf("\n front : %d \t rear : %d ",front,rear); 
-    if(front==-1)
-    {
-        printf("Queqe Is empty:"); 
-    }
-    else
-    {
-        for(int i=front;i<=rear;i++)
-        printf("\n\t\tq[%d]=%d",i,queqe[i]);
-    }
-} */
 int main()
 {
     int ch;
@@ -341,4 +312,3 @@ int main()
     }
     while(ch!=0);
 }
-
