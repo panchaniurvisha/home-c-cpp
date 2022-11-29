@@ -69,7 +69,7 @@ int main()
         printf("\nPress 1: Insert an element");  
         printf("\nPress 2: Delete an element");  
         printf("\nPress 3: Display the element");  
-        printf("\nEnter your choice");  
+        printf("\nEnter your choice :");  
         scanf("%d", &choice);  
       
         switch(choice)  
