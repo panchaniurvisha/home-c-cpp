@@ -24,7 +24,6 @@ int main()
     printf("\n %d",var1.ptr->i);
 }*/
 #include<stdio.h>
-#include<string.h>
 struct Node
 {
         int i;
