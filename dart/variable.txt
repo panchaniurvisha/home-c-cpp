@@ -1,0 +1,7 @@
+void main(){
+ String name = "urvisha";
+ int age = 25;
+ double height = 172.5;
+
+  print('$name is $age years old; his height is $height cm;');  
+}
