@@ -31,15 +31,16 @@ int main()
     struct Node *current=(struct Node*)malloc(sizeof(struct Node));
     current->data=22;
     current->link=NULL;
-    current=(struct Node*)malloc(sizeof(struct Node));
-    current->data=33;
-    current->link=NULL;
+    struct Node *current1=(struct Node*)malloc(sizeof(struct Node));
+    current1->data=33;
+    current1->link=NULL;
 
-    head->link=current;
     current->link=head;
-    head->link->link=current;
-    printf("%d\t",head->link->data);
+    head->link=current;
+    head->link->link=current1;
+
     printf("%d\t",current->link->data);
+    printf("%d\t",head->link->data);
     printf("%d\t",head->link->link->data);
     head_count(head);
     return 0;
