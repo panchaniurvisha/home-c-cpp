@@ -29,6 +29,9 @@ void main(){
    print("${data1%=data2}-------------");
    
    //bitwise operator
+   //type test operator
+   print("${data1 is int}");
+   print("${data2 is! int}");
    
    
 }
