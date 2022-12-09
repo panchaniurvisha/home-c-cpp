@@ -1,6 +1,6 @@
 void main(){
    //arithmatic operator
-   dynamic data1 =100,data2=20;
+   /*dynamic data1=100,data2=20;
    print("${data1+data2}");
    print("${data1/data2}");
    print("${data1-data2}");
@@ -20,18 +20,24 @@ void main(){
    print("${data1>data2 || data1<data2}");
    print("${!(data1<data2)}------------");
   
+   //type test operator
+   print("${data1 is int}");
+   print("${data2 is! int}");
+   (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
+  
    //Assignment operator
    print("${data1=100}");
    print("${data1+=data2}");
    print("${data1-=data2}");
    print("${data1*=data2}");
    print("${data1/=data2}");
-   print("${data1%=data2}-------------");
+   print("${data1%=data2}-------------");*/
    
    //bitwise operator
-   //type test operator
-   print("${data1 is int}");
-   print("${data2 is! int}");
+  int data1 =100,data2 =50,data3=10;
+  (data1>data2 && data1>data3)?print("$data1 is greater")("$data2 is greater"):("$data3 is grater");
+  
+  
    
    
 }
