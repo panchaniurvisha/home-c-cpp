@@ -1,0 +1,65 @@
+//no return no parameter
+/*class School{
+     String name="urvisha";
+     int rollno=1,age=25,standard=12;
+  
+     void getData(){
+       print("\nstudent name :$name");
+       print("\nstudent roll_no :$rollno");
+       print("\nstudent age :$age");
+       print("\nstudent standard :$standard"); 
+     }
+}
+void main(){
+  School student =School();
+  print(student.name);
+  print(student.rollno);
+  print(student.age);
+  print(student.standard);
+  student.getData();
+} */
+//no return with parameter
+/*class School{
+   void getData(String name,int rollno,int age,int standard){
+   print("\nstudent name :$name");
+   print("\nstudent roll_no :$rollno");
+   print("\nstudent age :$age");
+   print("\nstudent standard :$standard"); 
+  }
+}      
+void main(){
+   School student =School();
+   student.getData("urvisha",1,25,5);   
+}*/
+//wth return with parameter
+class School{
+   dynamic getData(String name,int rollno,int age,int standard,int science,int maths){
+    print("\nstudent name :$name");
+       print("\nstudent roll_no :$rollno");
+       print("\nstudent age :$age");
+       print("\nstudent standard :$standard"); 
+       print("\nstudent science marks :$science"); 
+      print("\nstudent standard :$maths"); 
+      return science+maths;
+  }
+}    
+void main(){
+   School student =School(science+maths);
+   student.getData("urvisha",1,25,5,50,60);   
+  print("\n get marks both subject :${}");
+}
+
+
+
+
+
+     
+  
+     
+     
+     
+   
+ 
+  
+   
+   
