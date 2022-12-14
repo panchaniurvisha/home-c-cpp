@@ -1,8 +1,7 @@
 //no return no parameter
-/*class School{
+class School{
     String name="urvisha";
     int rollno=1,age=25,standard=12;
-  
     void getData(){
        print("\nstudent name :$name");
        print("\nstudent roll_no :$rollno");
@@ -17,9 +16,18 @@
       print(student.age);
       print(student.standard);
       student.getData();
-} */
-
-
+} 
+/*class School{
+  String stdName;
+  void getStuName(){
+    print("Student name :$stdName");
+  }
+  void main(){
+    School schoolData=School();
+    schoolData.stdName='urvisha';
+    schoolData.getStuName();
+  }
+}*/
 //no return with parameter
 /*class School{
       void getData(String name,int rollno,int age,int standard){
@@ -33,8 +41,6 @@ void main(){
       School student =School();
       student.getData("urvisha",1,25,5);   
 }*/
-
-
 //with return with parameter
 /*class School{
      int getData(String name,int rollno,int age,int standard){
@@ -48,8 +54,6 @@ void main(){
     School student =School();   
     print("\nStandard :${ student.getData("urvisha",1,25,5)}");
 }*/
-
-
 //with return no parameter
 /*class School{
      String name="urvisha";
