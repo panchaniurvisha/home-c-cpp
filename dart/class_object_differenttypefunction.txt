@@ -1,5 +1,5 @@
 //no return no parameter
-class School{
+/*class School{
     String name="urvisha";
     int rollno=1,age=25,standard=12;
     void getData(){
@@ -16,7 +16,7 @@ class School{
       print(student.age);
       print(student.standard);
       student.getData();
-} 
+} */
 /*class School{
   String stdName;
   void getStuName(){
@@ -70,7 +70,18 @@ void main(){
   School student =School();
   print("total marks:${student.getData()}");
 }*/
-
+class Bike{
+  dynamic brand1 ="palsar";
+          print(brand1);
+          brand2="honda";
+          print(brand2);
+}
+void main(){
+ Bike bike1=Bike();
+ bike1.brand1;
+ Bike bike2=Bike();
+  bike2.brand2;
+}
 
 
 
