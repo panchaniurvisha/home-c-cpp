@@ -1,5 +1,6 @@
-class Maths{
-   dynamic data1=5,data2=20,data3=10;
+//no return no parameter
+/*class Maths{
+   dynamic data1=100,data2=20,data3=10;
    void arithmaticOperator(){
          print("${data1+data2}");
          print("${data1/data2}");
@@ -34,7 +35,7 @@ class Maths{
          print("data1 ^ data2 = ${data1 ^ data2}");
          print("~x = ${(~data1)}");
          print("data1 << 2 = ${data1 << 2}");
-         print("data2 >> 2 = ${data2 >> 2}");
+         print("data2 >> 2 = ${data2 >> 2}----------");
    }      
     void assignmentOperator(){     
          print("${data1=100}");
@@ -54,4 +55,187 @@ void main(){
           operator.conditionalOperator();
           operator.bitwiseOperator();
           operator.assignmentOperator();
+}*/
+
+
+//no return with parameter
+class Maths{
+   void arithmaticOperator(int data1,int data2){
+         print("${data1+data2}");
+         print("${data1/data2}");
+         print("${data1-data2}");
+         print("${data1*data2}");
+         print("${data1%data2}-------------");
+   }
+   void relationalOperator(int data1,int data2){
+         print("${data1<data2}");
+         print("${data1<=data2}");
+         print("${data1>data2}");
+         print("${data1>=data2}");
+         print("${data1==data2}");
+         print("${data1!=data2}-------------");
+   }
+   void logicalOperator(int data1,int data2){     
+         print("${data1>data2 && data1>data2}");
+         print("${data1>data2 || data1<data2}");
+         print("${!(data1<data2)}------------");
+   }
+   void typeTestOperator(int data1,int data2){   
+         print("${data1 is int}");
+         print("${data2 is! int}");
+         (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
+   }
+   void conditionalOperator(int data1,int data2,int data3){     
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+   }
+    void bitwiseOperator(int data1,int data2){
+         print("${data1&data2}");
+         print("${data1|data2}");
+         print("data1 ^ data2 = ${data1 ^ data2}");
+         print("~x = ${(~data1)}");
+         print("data1 << 2 = ${data1 << 2}");
+         print("data2 >> 2 = ${data2 >> 2}-----------");
+   }      
+    void assignmentOperator(dynamic data1,dynamic data2){     
+         print("${data1=100}");
+         print("${data1+=data2}");
+         print("${data1-=data2}");
+         print("${data1*=data2}");
+         print("${data1/=data2}");
+         print("${data1%=data2}-------------"); 
+  }
+}
+void main(){
+   Maths operator =Maths();
+          operator.arithmaticOperator(100,20);
+          operator.relationalOperator(100,20);
+          operator.logicalOperator(100,20);
+          operator.typeTestOperator(100,20);
+          operator.conditionalOperator(100,20,10);
+          operator.bitwiseOperator(100,20);
+          operator.assignmentOperator(100,20);
+}
+
+///with return with parameter
+class Maths{
+   int arithmaticOperator(int data1,int data2){
+         print("${data1+data2}");
+         print("${data1/data2}");
+         print("${data1-data2}");
+         print("${data1*data2}");
+         return data1%data2;
+   }
+   bool relationalOperator(int data1,int data2){
+         print("${data1<data2}");
+         print("${data1<=data2}");
+         print("${data1>data2}");
+         print("${data1>=data2}");
+         print("${data1==data2}");
+         return data1!=data2;
+   }
+  bool logicalOperator(int data1,int data2){     
+         print("${data1>data2 && data1>data2}");
+         print("${data1>data2 || data1<data2}");
+         return !(data1<data2);
+  }
+   int typeTestOperator(int data1,int data2){   
+         print("${data1 is int}");
+         print("${data2 is! int}");
+         (data1>data2)?("$data1 is greater"):("$data2 is greater");
+         return 
+        
+   }
+   int conditionalOperator(int data1,int data2,int data3){     
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+          return
+   }
+    int bitwiseOperator(int data1,int data2){
+         print("${data1&data2}");
+         print("${data1|data2}");
+         print("data1 ^ data2 = ${data1 ^ data2}");
+         print("~x = ${(~data1)}");
+         print("data1 << 2 = ${data1 << 2}");
+         return data2 >> 2;
+   }      
+   int assignmentOperator(dynamic data1,dynamic data2){     
+         print("${data1=100}");
+         print("${data1+=data2}");
+         print("${data1-=data2}");
+         print("${data1*=data2}");
+         print("${data1/=data2}");
+         return data1%=data2;
+  }
+}
+void main(){
+   Maths operator =Maths();
+          print ("\ndata1%data2 :${operator.arithmaticOperator(100,20)}");
+          print("\ndata1!=data2 :${operator.relationalOperator(100,20)}");
+          print("\n!(data1<data2) :${operator.logicalOperator(100,20)}");
+          print("\nmaximum value:${operator.typeTestOperator(100,20)}");
+          print("\nmaximum value :${operator.conditionalOperator(100,20,10)}");
+          print("\ndata2 >> 2 :${operator.bitwiseOperator(100,20)}");
+          print("\ndata1%=data2 :${operator.assignmentOperator(100,20)}");
+}
+
+
+//with return no parameter
+class Maths{
+   dynamic data1=100,data2=20,data3=10;
+   int arithmaticOperator(){
+         print("${data1+data2}");
+         print("${data1/data2}");
+         print("${data1-data2}");
+         print("${data1*data2}");
+         return data1%data2;
+   }
+   bool relationalOperator(){
+         print("${data1<data2}");
+         print("${data1<=data2}");
+         print("${data1>data2}");
+         print("${data1>=data2}");
+         print("${data1==data2}");
+         return data1!=data2;
+   }
+  bool logicalOperator(){     
+         print("${data1>data2 && data1>data2}");
+         print("${data1>data2 || data1<data2}");
+         return !(data1<data2);
+  }
+   int typeTestOperator(){   
+         print("${data1 is int}");
+         print("${data2 is! int}");
+         (data1>data2)?("$data1 is greater"):("$data2 is greater");
+         return 
+        
+   }
+   int conditionalOperator(){     
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+          return
+   }
+    int bitwiseOperator(){
+         print("${data1&data2}");
+         print("${data1|data2}");
+         print("data1 ^ data2 = ${data1 ^ data2}");
+         print("~x = ${(~data1)}");
+         print("data1 << 2 = ${data1 << 2}");
+         return data2 >> 2;
+   }      
+   int assignmentOperator(){     
+         print("${data1=100}");
+         print("${data1+=data2}");
+         print("${data1-=data2}");
+         print("${data1*=data2}");
+         print("${data1/=data2}");
+         return data1%=data2;
+  }
+}
+void main(){
+   Maths operator =Maths();
+          print ("\ndata1%data2 :${operator.arithmaticOperator()}");
+          print("\ndata1!=data2 :${operator.relationalOperator()}");
+          print("\n!(data1<data2) :${operator.logicalOperator()}");
+          print("\nmaximum value:${operator.typeTestOperator()}");
+          print("\nmaximum value :${operator.conditionalOperator()}");
+          print("\ndata2 >> 2 :${operator.bitwiseOperator()}");
+          print("\ndata1%=data2 :${operator.assignmentOperator()}");
 }
