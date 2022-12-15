@@ -71,16 +71,19 @@ void main(){
   print("total marks:${student.getData()}");
 }*/
 class Bike{
-  dynamic brand1 ="palsar";
-          print(brand1);
-          brand2="honda";
-          print(brand2);
+  String brand1 ="palsar", brand2="honda";
+  void getData(){
+     print(brand1);   
+  } 
+  void getValue(){
+     print(brand2);
+  }
 }
 void main(){
  Bike bike1=Bike();
- bike1.brand1;
+ bike1.getData();
  Bike bike2=Bike();
-  bike2.brand2;
+ bike2.getValue();
 }
 
 
