@@ -27,7 +27,7 @@
          (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
    }
    void conditionalOperator(){     
-         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+         (data1>data2 && data1>data3)?print("$data1 is greater"):print(data2>data3)?("$data2 is greater"):print("$data3 is grater");
    }
     void bitwiseOperator(){
          print("${data1&data2}");
@@ -86,7 +86,7 @@ class Maths{
          (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
    }
    void conditionalOperator(int data1,int data2,int data3){     
-         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?print("$data2 is greater"):print("$data3 is grater");
    }
     void bitwiseOperator(int data1,int data2){
          print("${data1&data2}");
@@ -141,12 +141,12 @@ class Maths{
    int typeTestOperator(int data1,int data2){   
          print("${data1 is int}");
          print("${data2 is! int}");
-         (data1>data2)?("$data1 is greater"):("$data2 is greater");
+         (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
          return 
         
    }
    int conditionalOperator(int data1,int data2,int data3){     
-         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?print("$data2 is greater"):print("$data3 is grater");
           return
    }
     int bitwiseOperator(int data1,int data2){
@@ -204,12 +204,12 @@ class Maths{
    int typeTestOperator(){   
          print("${data1 is int}");
          print("${data2 is! int}");
-         (data1>data2)?("$data1 is greater"):("$data2 is greater");
+         (data1>data2)?print("$data1 is greater"):print("$data2 is greater");
          return 
         
    }
    int conditionalOperator(){     
-         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?("$data2 is greater"):("$data3 is grater");
+         (data1>data2 && data1>data3)?print("$data1 is greater"):(data2>data3)?print("$data2 is greater"):print("$data3 is grater");
           return
    }
     int bitwiseOperator(){
