@@ -1,7 +1,6 @@
 import 'dart:io';
   class Bank{
-   dynamic name;
-   dynamic  acc_no,balance;
+   dynamic name,acc_no,balance;
    void openAccount(){
     print("Enter Account no:");
     acc_no=int.parse(stdin.readLineSync()!);
@@ -33,7 +32,6 @@ import 'dart:io';
    }
    void showAccount(){
     print("your Balance:$balance");
-    
    }
   }
   void main(){
