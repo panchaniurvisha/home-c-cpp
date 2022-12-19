@@ -1,6 +1,6 @@
 import 'dart:io';
   class Bank{
-   dynamic name,acc_no,balance;
+   dynamic name,acc_no,balance,amt;
    void openAccount(){
     print("Enter Account no:");
     acc_no=int.parse(stdin.readLineSync()!);
@@ -14,13 +14,11 @@ import 'dart:io';
     print("account details :\n Account no:$acc_no,\n name :$name ,\n Balance:$balance");
    }
    void deposite(){
-    int amt;
     print("Enter amount u want to deposite:");
     amt=int.parse(stdin.readLineSync()!);
     balance=balance+amt;
    }
    void withdraw(){
-    int amt;
     print("Enter amount u want to withdraw:");
     amt=int.parse(stdin.readLineSync()!);
     if(balance>=1000){
