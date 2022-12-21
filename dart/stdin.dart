@@ -1,8 +1,8 @@
 import 'dart:io';
 
 void main() {
-  String data, data1;
-  int data2, data3;
+  String ?data, data1;
+  int ?data2, data3;
   data = stdin.readLineSync()!;
   print("enter your name :$data");
   data1 = stdin.readLineSync()!;
