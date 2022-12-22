@@ -1,72 +1,85 @@
 import 'dart:io';
-  class Bank{
-   String? name;
-   int ?acc_no,balance,amt;
-   void openAccount(){
-    print("Enter Account no:");
-    acc_no=int.parse(stdin.readLineSync()!);
-    print("Enter The Name :");
-    name=(stdin.readLineSync()!);
-    print("Enter The Balance?");
-    balance=int.parse(stdin.readLineSync()!);
-   }
-   void printAccDetails()
-   {
-    print("~~~~~~~~~~~~~~~account details ~~~~~~~~~~~~~~:\n Account no:$acc_no,\n name :$name ,\n Balance:$balance");
-   }
-   void deposite(){
-    print("Enter amount u want to deposite:");
-    amt=int.parse(stdin.readLineSync()!);
-    balance=balance!+amt!;
-   }
-   void withdraw(){
-    print("Enter amount u want to withdraw:");
-    amt=int.parse(stdin.readLineSync()!);
-    if(balance!>=1000){
-      balance=balance!-amt!;
-    }
-    else{
-      print("less balance Transaction fail");
-    }
-   }
-   void showAccount(){
-    print("your Balance:$balance");
-   }
+
+class Arithmatic {
+  int? data1, data2, sum;//, multiple, devision, modulus;
+  void printData() {
+    print("\ndata1=");
+    data1 = int.parse(stdin.readLineSync()!);
+    print("\ndata2 =");
+    data2 = int.parse(stdin.readLineSync()!);
   }
-  void main(){
-    Bank employee=Bank();
-    int ?choice;
-    do{
-        print("\n---------------MENU---------------");
-        print("1:open account");
-        print("2.Show account details");
-        print("3.deposite");
-        print("4.withdraw");
-        print("5.showAccount");
-        print("6.exit");
-        print("Enter your choice :   ");
-        choice=int.parse(stdin.readLineSync()!);
-    switch(choice){
-      case 1:
-        employee.openAccount();
-        break;
-      case 2:
-        employee.printAccDetails();
-        break;
-      case 3:
-        employee.deposite();
-        break;
-      case 4:
-        employee.withdraw();
-        break;
-      case 5:
-        employee.showAccount();
-        break;
-      default:
-        print("Invalid input ");
-    }
-  }
-  while(choice!=0);
 }
-  
+
+class Sum extends Arithmatic {
+  @override
+  void printData() {
+    super.printData();
+  }
+
+  void showResult() {
+    print("sum=${data1! + data2!}");
+  }
+}
+
+class Addition extends Sum {
+  @override
+  void showResult() {
+    super.showResult();
+  }
+
+  void multiply() {
+     print("multiple=${sum! * data2!}");
+  }
+}
+
+/*class Multiplication extends Addition {
+  @override
+  void multiply() {
+    super.multiply();
+  }
+  void devide() {
+    print("devision=${multiple! / data2!}");
+  }
+}
+
+class Devision extends Multiplication {
+  @override
+  void devide() {
+    super.devide();
+  }
+  void subtraction() {
+    print("substraction=${devision! - data2!}");
+  }
+}
+
+class Subtraction extends Devision {
+  @override
+  void subtraction() {
+    super.subtraction();
+  }
+  void module() {
+      print("substraction=${modulus! % data2!}");
+  }
+}
+
+class Modulus extends Subtraction {
+  @override
+  void module() {
+    super.module();
+  }
+}*/
+void main() {
+  Sum sum1 = Sum();
+  sum1.printData();
+  Addition add1 =Addition();
+  add1.showResult();
+  /*Multiplication multiply1 =Multiplication();
+  multiply1.multiply();
+  Devision devide1 =Devision();
+  devide1.devide();
+  Subtraction subtraction1 =Subtraction();
+  subtraction1.subtraction();
+  Modulus module1 =Modulus();
+  module1.module();*/
+}
 
