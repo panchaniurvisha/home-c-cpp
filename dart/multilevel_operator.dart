@@ -1,7 +1,8 @@
+
 import 'dart:io';
 
-/*class Arithmatic {
-  int ?data1, data2, sum, multiple, devision, modulus,subtraction;
+class Arithmatic {
+  int ?data1, data2;
   void printData() {
     print("\ndata1=");
     data1 = int.parse(stdin.readLineSync()!);
@@ -10,96 +11,65 @@ import 'dart:io';
   }
 }
 
-class Sum extends Arithmatic {
-  @override
-  void printData() {
-    super.printData();
-  }
-
-  void showResult() {
+class Addition extends Arithmatic {
+  void add() {
     print("sum=${data1! + data2!}");
   }
 }
-
-class Addition extends Sum {
-  @override
-  void showResult() {
-    super.showResult();
-  }
+class Multiplication extends  Addition{
 
   void multiply() {
      print("multiple=${data1! * data2!}");
   }
 }
-
-class Multiplication extends Addition {
-  @override
-  void multiply() {
-    super.multiply();
-  }
-  void devide() {
+class Devision extends Multiplication {
+     void devide() {
     print("devision=${data1! / data2!}");
   }
-}
-
-class Devision extends Multiplication {
-  @override
-  void devide() {
-    super.devide();
-  }
-  void subtractions() {
-    print("substraction=${data1! - data2!}");
-  }
+  
 }
 
 class Subtraction extends Devision {
-  @override
   void subtractions() {
-    super.subtractions();
+    print("substraction=${data1! - data2!}");
   }
-  void module() {
-      print("modules=${data1! % data2!}");
-  }
+  
 }
 
 class Modulus extends Subtraction {
-  @override
-  void module() {
-    super.module();
+ void module() {
+      print("modules=${data1! % data2!}");
   }
 }
 void main() {
   Modulus module =Modulus();
   module.printData();
-  module.showResult();
+  module.add();
   module.multiply();
   module.devide();
   module.subtractions();
   module.module();
-}*/
+}
 
-class Machinery{
+/*class Machinery{
   void generate(){
     print("\n all machine is worked on");
   }
 }
 class Spareparts extends Machinery{
-  @override
-  void generate() {
-    super.generate();
-  }
-  void close(){
-    print("\n all mmachine is worked off");
-  }
+  void running(){
+      print("\n all machine is worked fast");
+    }
 }
 class Kit extends Spareparts{
-  @override
-  void close() {
-    super.close();
+  void close(){
+    print("\n all machine is worked off");
   }
+  
 }
 void main(){
   Kit kit1 =Kit();
   kit1.generate();
+  kit1.running();
   kit1.close();
-}
+}*/
