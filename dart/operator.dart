@@ -5,7 +5,8 @@ void main(){
    print("${data1/data2}");
    print("${data1-data2}");
    print("${data1*data2}");
-   print("${data1%data2}-------------");
+   print("${data1%data2}");
+   print("${data1~/data2}-------------");
    
    //relational operator
    print("${data1<data2}");
