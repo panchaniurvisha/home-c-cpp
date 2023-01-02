@@ -1,4 +1,4 @@
-class interfaceMachinery {
+class Machinery {
   void generate() {
     print("\n all machine is worked on");
   }
@@ -6,7 +6,7 @@ class interfaceMachinery {
     print("\n all machine is off");
   }
 }
-class Spareparts implements interfaceMachinery {
+class Spareparts implements Machinery {
   @override
   void generate() {
     print("\n all machine is Started by employee");
@@ -17,7 +17,7 @@ class Spareparts implements interfaceMachinery {
   }
 
 }
-class Kit implements interfaceMachinery {
+class Kit implements Machinery {
   @override
   void generate() {
     print("\n kit is open");
