@@ -41,9 +41,55 @@ void main(){
   listSeven.removeRange(0,2);///remove untill i want
   print(listSeven);
 
-  List listEight =["Smith","Peter","Handscomb","Devansh","Cruise"];///forEach--method
+  List listEight =["Smith","Peter","Handscomb","Devansh","Cruise"];///forEach--method means for loop
   listEight.forEach((item)
   {print("${listEight.indexOf(item)}:$item");});
+
+  List listNine=[1,2,3,4,5];///get Range 
+  listNine.getRange(0, 5);
+  print(listNine);
+
+  List listTen=[1,2,3,4,5,6,5];///only one index find
+  print(listTen.indexOf(4));
+  print(listTen.indexOf(5,5));//2 element same(element,index_starting)
+
+  List listeleven=[1,2,3,4,5];///check element list is it  or not 
+  print(listeleven.any((element)=>element>=4));
+  print(listeleven.any((element)=>element>=7));
+
+  List listTwelve=<String>["urvi","piyu","kairav"]; 
+  var map=listTwelve.asMap();///all index and value show
+  print(map);
+  print(map.keys.toList());///all index show 
+
+  /*List listThirty=["urvisha"];//caste
+  print(listThirty.cast<int>().remove("a"));*/
+
+  //~~~~~~~~~~~~~~~EXPAND~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  List pairs = [[1, 2], [3, 4]];///expand combine lists
+  var listFourty = pairs.expand((pair) => pair).toList();
+  print(listFourty); // => [1, 2, 3, 4];
+  List input = [1, 2, 3];
+  var duplicated = input.expand((i) => [i, i]).toList();
+  print(duplicated); // => [1, 1, 2, 2, 3, 3]
+
+  List basket1 = ['Mango', 'Apple'];
+  List basket2 = ['Orange', 'Avocado', 'Grape'];
+  List basket3 = ['Lemon'];
+  // converting the lists to an iterable
+  var newBasketIterable = [basket1, basket2, basket3].expand((x) => x);
+  // combining the lists 
+  var newBasket = newBasketIterable.toList();
+  print("Iterable:  $newBasketIterable");
+  print("Combined List:  $newBasket");
+
+  
+
+
+ 
+
+
+  
 }
 
 
