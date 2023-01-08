@@ -140,8 +140,8 @@ class Maths{
   }
   dynamic typeTestOperator(int data1,int data2){ 
          
-         print("\n${data1 is int}");
-         print("${data2 is! int}");
+         //print("\n${data1 is int}");
+         //print("${data2 is! int}");
          dynamic max=(data1>data2)?("$data1 is greater"):("$data2 is greater");
          return max;
         

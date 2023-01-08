@@ -2,7 +2,6 @@ void main(){
     String name="urvisha";
     int total;
     double percentage;
-    double result;
     int maths=80;
     int science=69;
     int english =75;
