@@ -6,7 +6,7 @@ void main(){
     print('is not empty()--->${data.isNotEmpty}');
     print('length()--->${data.length}');
     print('runtimeType()--->${data.runtimeType}');
-  //print('runes--->${data.runes}');
+    //print('6.runes--->${data.runes}');
   /*String str='Hello World Hello';
     Iterable<Match> matches = "Hello".allMatches(str);
     for(final Match m in matches){
@@ -38,7 +38,15 @@ void main(){
     print('trimLeft--->${'  data  '.trimLeft()}');
     print('trimRight--->${'  data  '.trimRight()}');
     print('trim--->${'  data  '.trim()}');
-
+    //print('trim--->${data.codeUnits}');
+    /*String result = 'Eats shoots leaves'.splitMapJoin(RegExp(r'Eats'),onMatch:(m) => '${m[0]}', 
+    onNonMatch: (n) => n.toUpperCase());
+    print(result);
+     String result1 = 'Eats shoots leaves';
+     var regexp =RegExp(r'leaves');
+     var match=regexp.matchAsPrefix(result1, 12);
+     print(match);*/
+     
 
     
 
