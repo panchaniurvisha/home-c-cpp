@@ -6,12 +6,12 @@ void main(){
     print('is not empty()--->${data.isNotEmpty}');
     print('length()--->${data.length}');
     print('runtimeType()--->${data.runtimeType}');
-    //print('6.runes--->${data.runes}');
-  /*String str='Hello World Hello';
+    print('6.runes--->${data.runes}');
+  String str='Hello World Hello';
     Iterable<Match> matches = "Hello".allMatches(str);
     for(final Match m in matches){
       print(m[0]);
-    }*/
+    }
     print('compareTo()--->${data.compareTo("Hello World")}');///same 0
     print('compareTo()--->${data.compareTo("Hello ")}');///current>specified=1
     print('compareTo()--->${data.compareTo("Hello World dart")}');///current<specified=-1
@@ -38,7 +38,7 @@ void main(){
     print('trimLeft--->${'  data  '.trimLeft()}');
     print('trimRight--->${'  data  '.trimRight()}');
     print('trim--->${'  data  '.trim()}');
-    //print('trim--->${data.codeUnits}');
+    print('trim--->${data.codeUnits}');
     /*String result = 'Eats shoots leaves'.splitMapJoin(RegExp(r'Eats'),onMatch:(m) => '${m[0]}', 
     onNonMatch: (n) => n.toUpperCase());
     print(result);
