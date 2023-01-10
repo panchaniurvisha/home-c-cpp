@@ -1,14 +1,17 @@
- String long_string(arr) {
-  var longest = arr[0];
-    for (var i = 1; i < arr.length; i++) {
-      if (arr[i].length > longest.length) {
-            longest = arr[i];
-        }
+ dynamic getLongestWord(str){
+  int i,maxLength=0;
+  dynamic longestWord ='';
+  dynamic words=str.split(' ');
+  for ( i = 0; i < words. length; i++) {
+      if (words[i]. length > maxLength) {
+        maxLength = words[i]. length;
+        longestWord = words[i];
+        return longestWord;
+    }
   }
-   return longest;
-}
+ }
 void main(){
-  var arr = ["Web", "Development", "Tutorial"];
+  dynamic str = "web development tutorial";
   print("Longest word Name--------------");
-  print(long_string(arr));
-}
+  print(getLongestWord(str));
+
