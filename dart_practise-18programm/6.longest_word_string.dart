@@ -1,4 +1,4 @@
- dynamic getLongestWord(str){
+ dynamic getLongestWord([str]){
   int i,maxLength=0;
   dynamic longestWord ='';
   dynamic words=str.split(' ');
@@ -13,5 +13,6 @@
 void main(){
   dynamic str = "web development tutorial";
   print("Longest word Name--------------");
-  print(getLongestWord(str));
+  print(getLongestWord([str]));
 
+}

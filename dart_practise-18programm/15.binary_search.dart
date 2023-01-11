@@ -24,3 +24,4 @@ binarySearch(List<int> arr, int userValue, int min, int max) {
     }
   }
   return null;
+}
