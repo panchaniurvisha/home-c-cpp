@@ -1,31 +1,8 @@
-
+List getAllSubsets(l)=> l.fold<List>([[ ]],(subLists,element){
+    return subLists.map((subList) =>[subList,subList+[element]]).expand((element)=>element).toList();
+  });
 void main(){
-  int i;
-   subset(arra, arra_size)
- {
-    var result_set = [], 
-        result;
-    
-   
-for(var x = 0; x < Math.pow(2, arra.length); x++)
-  {
-    result = [];
-    i = arra.length - 1; 
-     do
-      {
-      if( (x & (1 << i)) !== 0)
-          {
-             result.push(arra[i]);
-           }
-        }  while(i--);
-
-    if( result.length >= arra_size)
-       {
-          result_set.push(result);
-        }
-    }
-
-    return result_set; 
+  ///String str="hello world";
+  List<int> l=[1,2,3];
+  print(getAllSubsets(l));
 }
-
-console.log(subset([1, 2, 3], 2));
