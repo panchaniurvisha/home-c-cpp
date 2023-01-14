@@ -1,41 +1,36 @@
-void subset(int arr[], int data[], int start, int end, int index, int r)
-{
-    int j, i;
+#include <stdio.h>
+void printCombination(int arr[], int n, int r){
+    int data[r];
+    combinationUtil(arr, n, r, 0, data, 0);
+}
+   /*index  ---> Current index in data[]
+   data[] ---> Temporary array to store current combination
+   i      ---> index of current element in arr[]     */
+void combinationUtil(int arr[], int n, int r, int index,int data[], int i){
+    // Current combination is ready, print it
     if (index == r) {
-        for (j = 0; j < r; j++)
+        for (int j = 0; j < r; j++)
             printf("%d ", data[j]);
         printf("\n");
         return;
     }
-    for (i = start; i <= end && end - i + 1 >= r - index; i++)
-    {
-        data[index] = arr[i];
-        subset(arr, data, i+1, end, index+1, r);
-    }
-}
-/*  End of subset()  */
+    // When no more elements are there to put in data[]
+    if (i >= n)
+        return;
  
-/*  Function to print the subset  */ 
-void printsubset(int arr[], int n, int r)
-{
-    int data[r];
-    subset(arr, data, 0, n - 1, 0, r);
-}
-/*  End of printsubset()  */
+    // current is included, put next at next location
+    data[index] = arr[i];
+    combinationUtil(arr, n, r, index + 1, data, i + 1);
  
-/*  The main() begins  */
-int main()
-{
-    int arr[3], k, n, i;
-    printf("Enter the number of input : ");
-    scanf("%d", &n);
-    printf("\nEnter the integers: \n");
-    for (  i = 0; i < n; i++)
-    {
-	scanf("%d", &arr[i]);
-    }
-    printf("Enter value of k: ");
-    scanf("%d", &k);
-    printsubset(arr, n, k);
+    // current is excluded, replace it with next
+    // (Note that i+1 is passed, but index is not
+    // changed)
+    combinationUtil(arr, n, r, index, data, i + 1);
+}
+int main(){
+    int arr[] = {1,2,3};
+    int r = 2;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printCombination(arr, n, r);
     return 0;
 }
