@@ -35,7 +35,7 @@ void main(){
    print("data1 ^ data2 = ${data1 ^ data2}");
    print("~x = ${(~data1)}");
    print("data1 << 2 = ${data1 << 2}");
-   print("data2 >> 2 = ${data2 >> 2}");
+   print("data2 >> 2 = ${data2 >> 2}-------------");
    
    //Assignment operator
    print("${data1=100}");
